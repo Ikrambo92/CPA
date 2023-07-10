@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: rgba(0, 136, 169, 1);
+    --text-color: #000;
+    --bg-color: background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    
+}
+
+/* Navbar Start */
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 10px 80px;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid;
+}
+
+.logo {
+    height: 79px;
+    cursor: pointer;
+}
+
+.navbar-container ul {
+    list-style: none;
+    display: flex;
+    gap: 75px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.navbar-container ul a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar-container ul li>i {
+    text-decoration: none;
+    margin-left: 10px;
+    /* display: none; */
+}
+
+.navbar-container ul li:nth-child(3) {
+    position: relative;
+}
+
+.navbar-container ul li:nth-child(3):hover::before {
+    background: var(--bg-color);
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    opacity: 0.2;
+    border-radius: 10px;
+}
+
+.navbar-container ul li:hover i,
+.navbar-container ul li:hover a {
+    text-decoration: underline;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contact-btn,
+.bg-container button {
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 550;
+    border: 1px solid #000;
+    margin-bottom: 12px;
+}
+
+
+.contact-btn:hover,
+.bg-container button:hover {
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    background-color: #0099ff;
+    color: #fff;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-container ul li ul {
+    position: absolute;
+    top: 100%;
+    left: -30vw;
+    width: 40vw;
+    border: 1px solid var(--border-color);
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+    background-color: #fff;
+    height: 80vh auto;
+}
+
+.navbar-container ul li ul li {
+    margin-top: 20px;
+}
+
+.navbar-container ul li ul li span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.navbar-container ul li ul li p {
+    font-size: 1rem;
+}
+
+.navbar-container ul li:hover ul {
+    display: block;
+}
+
+/* Navbar End */
+
+/* Main Body Section Starts */
+/* background image and content */
+.bg-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url('./images/background-cover.jpg');
+    background-size: cover;
+    color: #fff;
+}
+
+.bg-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.bg-content {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.bg-content h1,
+p {
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* intro content */
+.intro-content {
+    height: auto;
+    padding: 90px 0px 90px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.intro-content>* {
+    width: 60%;
+}
+
+/* intro content end */
+
+/* Card Section Start */
+
+.card-container {
+    height: 300px;
+    padding-bottom: 700px;
+}
+
+.card-container h3 {
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+/* Card Section End */
+
+/* Footer section start */
+
+footer {
+    background-color: var(--bg-color);
+    border-top: 1px solid;
+    height: 10vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+    /* position: sticky; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    min-height: calc(100% - 85%);
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+footer .footer-container ul li {
+    list-style: circle;
+}
+
+footer .footer-container ul li:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer .footer-container ul li>* {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Footer section end */
+
