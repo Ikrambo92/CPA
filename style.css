@@ -5,6 +5,19 @@
     font-family: sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+}
+
+
 :root {
     --primary-color: rgba(0, 136, 169, 1);
     --text-color: #000;
@@ -36,7 +49,6 @@
     display: flex;
     gap: 75px;
     text-decoration: none;
-    font-size: 1.2rem;
     color: var(--text-color);
     cursor: pointer;
 }
@@ -76,6 +88,7 @@
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 
 .contact-btn,
 .bg-container button {
@@ -231,16 +244,9 @@ p {
 footer {
     background-color: var(--bg-color);
     border-top: 1px solid;
-    height: 10vh;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; */
-    /* position: sticky; */
-    left: 0;
-    right: 0;
-    bottom: 0;
+    height: auto;
+    /* bottom: 0; */
     background-color: white;
-    min-height: calc(100% - 85%);
 }
 
 footer .footer-container {
@@ -266,4 +272,18 @@ footer .footer-container ul li>* {
 }
 
 /* Footer section end */
+
+
+/* Company html page - main section */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-title, .hero-sub-heading {
+    grid-column: 1 / -1;
+}
 
