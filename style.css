@@ -11,9 +11,6 @@
     --bg-color: background-color: rgba(255, 255, 255, 0.5);
 }
 
-.container {
-    
-}
 
 /* Navbar Start */
 .header {
@@ -104,6 +101,29 @@
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
 }
+
+
+.card-container .card-group .card:hover {
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    z-index: 4;
+}
+
+.card-container .card-group .card:not(:hover) {
+    padding: 0;
+}
+
+.card-container .card-group .card:hover~.card {
+    transform: translate(20px);
+}
+
+.card-container .card-group .card:last-child:hover {
+    transform: scale(1.1, 1.1) translateX(20px);
+}
+
 
 .navbar-container ul li ul {
     position: absolute;
@@ -202,6 +222,7 @@ p {
     text-transform: capitalize;
     text-decoration: underline;
 }
+
 
 /* Card Section End */
 
