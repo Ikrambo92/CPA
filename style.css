@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-.container {
+.container-fluid {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100%;
@@ -267,6 +267,7 @@ footer {
     background-color: white;
     width: 100vw;
     padding: 30px 0;
+    z-index: 5;
 }
 
 footer .footer-container {
@@ -316,11 +317,13 @@ footer .footer-container ul li>* {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
     font-weight: 600;
+    color: var(--primary-color);
 }
 
 .hero-sub-heading {
     font-weight: 600;
     text-transform: capitalize;
+    font-size: 25px;
 }
 
 .hero-text {
@@ -330,9 +333,5 @@ footer .footer-container ul li>* {
 }
 
 .hero-content img {
-    position: absolute;
-    top: 0%;
-    right: 0%;
     height: 1000px;
-    margin-top: 112px;
 }
