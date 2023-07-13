@@ -84,14 +84,37 @@
                 <h5>We would love to respond to your queries, feel free to get in touch</h5>
             </div>
             <div class="contact-container">
-                <h6>Send your request</h6>
                 <div class="contact-details">
-                    <form action="#">
-                        <label for="name">
-                            Name
-                            <input type="text" name="name">
-                        </label>
+                    <h6>Send your request</h6>
+                    <form>
+                        <div class="input-row">
+                            <label for="name">Name:
+                                <input type="text" id="name" name="name" required></label>
+
+                            <label for="phone">Phone Number:
+                                <input type="tel" id="phone" name="phone" required></label>
+
+                        </div>
+
+                        <div class="input-row">
+                            <label for="email">Email:
+                                <input type="email" id="email" name="email" required></label>
+
+                            <label for="subject">Subject:
+                                <input type="text" id="subject" name="subject" required></label>
+                        </div>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                        <button type="submit">Submit</button>
                     </form>
+                </div>
+                <div class="map-details">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d701.2394393212265!2d-2.1641560365264674!3d53.409924066138856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb379743410ff%3A0xd53f784db07ab3a8!2sBeckwith%20House%20(Orbit%20Developments)!5e0!3m2!1sen!2suk!4v1689172469257!5m2!1sen!2suk"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
