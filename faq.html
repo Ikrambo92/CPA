@@ -12,7 +12,7 @@
         crossorigin='anonymous' />
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>CPA | Contact Us</title>
+    <title>CPA | FAQ</title>
 </head>
 
 <body>
@@ -74,58 +74,63 @@
                     </li>
                 </ul>
             </nav>
-            <a href="#"><button class="contact-btn">Contact</button></a>
+            <a href="contact-us.html"><button class="contact-btn">Contact</button></a>
         </header>
 
 
         <section>
-            <div class="contact-heading">
-                <h2>Contact Us</h2>
-                <h5>We would love to respond to your queries, feel free to get in touch</h5>
-            </div>
-            <div class="contact-container">
-                <div class="contact-details">
-                    <h6>Send your request</h6>
-                    <form>
-                        <div class="input-row">
-                            <label for="name">Name:
-                                <input type="text" id="name" name="name" required></label>
-
-                            <label for="phone">Phone Number:
-                                <input type="tel" id="phone" name="phone" required></label>
-
-                        </div>
-
-                        <div class="input-row">
-                            <label for="email">Email:
-                                <input type="email" id="email" name="email" required></label>
-
-                            <label for="subject">Subject:
-                                <input type="text" id="subject" name="subject" required></label>
-                        </div>
-
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-                <div class="map-details">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d701.2394393212265!2d-2.1641560365264674!3d53.409924066138856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb379743410ff%3A0xd53f784db07ab3a8!2sBeckwith%20House%20(Orbit%20Developments)!5e0!3m2!1sen!2suk!4v1689172469257!5m2!1sen!2suk"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-container">
+                <div class="accordion">
+                    <input type="radio" name="select" class="accordion-select" checked />
+                    <div class="accordion-title"><span>What are business rates?</span></div>
+                    <div class="accordion-content">Business rates, also known as non-domestic rates, are taxes levied on non-domestic properties in the United Kingdom.
+                    They are a significant source of income for local authorities and contribute to funding local services.</div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>How are business rates calculated?</span></div>
+                    <div class="accordion-content">Business rates are calculated based on the rateable value of a property and the multiplier set by the government. The
+                    rateable value is an estimate of the property's open market rental value on a specific date. It is reassessed
+                    periodically by the Valuation Office Agency.</div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>Am I eligible for any business rates relief or exemptions?</span></div>
+                    <div class="accordion-content">Eligibility for business rates relief or exemptions depends on factors such as the property's rateable value, business
+                    type, location, and the specific relief scheme. Different relief schemes have different criteria, so it is advisable to
+                    consult with the relevant authorities or a business rates specialist.</div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>What types of properties are exempt from business rates?</span></div>
+                    <div class="accordion-content">Certain properties may be exempt from business rates, such as agricultural land and buildings, religious buildings, and
+                    some properties used for charitable purposes. However, exemptions can vary, and it is essential to check with the local
+                    council or relevant authorities for specific details.</div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>Are there any specific reliefs for small businesses?</span></div>
+                    <div class="accordion-content">Yes, the Small Business Rate Relief (SBRR) scheme provides relief to small businesses meeting certain criteria. It
+                    offers reduced or zero rates for eligible businesses with a low rateable value. The exact relief and eligibility
+                    criteria can vary among different regions.</div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>Can I appeal my business rates if I think they are incorrect?</span></div>
+                    <div class="accordion-content">Yes, if you believe your business rates are incorrect, you have the right to appeal. You can contact the Valuation
+                    Office Agency to initiate the appeals process and provide evidence to support your case. It is recommended to seek
+                    professional advice when considering a rates appeal.</div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>Are there any specific rates or reliefs for certain industries or sectors?</span></div>
+                    <div class="accordion-content">Yes, certain industries or sectors may be eligible for specific rates or reliefs. For example, there may be targeted
+                    relief schemes for the hospitality sector or business rates discounts for newly developed properties. It is advisable to
+                    check with the local council or authorities for industry-specific schemes.</div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>What happens if I don't pay my business rates?</span></div>
+                    <div class="accordion-content">If you fail to pay your business rates, the local council has the authority to take enforcement action, such as issuing
+                    a summons, applying for a liability order, or using bailiffs to collect the debt. It's important to communicate with
+                    your council if you're facing difficulties in paying your rates to explore possible payment arrangements.</div>
                 </div>
             </div>
         </section>
 
 
-        <footer>
+        <footer id="footer">
             <div class="footer-container">
                 <ul>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
                 <ul>
                     <li><a href="#">Terms of Service</a></li>
