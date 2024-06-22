@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/output.css">
+    <script src="/js/script.js" defer></script>
+
+    <title>Cheshire Property Advisers</title>
+</head>
+
+<body>
+
+    <!-- Navbar section -->
+    <nav class="fixed top-0 left-0 z-20 w-screen p-6 bg-white border-b-2 shadow-lg">
+        <div class="container flex items-center justify-between mx-auto">
+            <div class="transition-opacity hover:opacity-75">
+                <img src="/img/logo.png" alt="logo" class="max-h-24 max-w-96">
+            </div>
+
+            <!-- burger menu -->
+            <div class="absolute transition-opacity cursor-pointer top-14 right-14 lg:hidden hover:opacity-75"
+                id="burger-icon" aria-label="open menu" aria-expanded="false">
+                <div class="w-6 h-0.5 bg-blue-800 my-1 transition-all"></div>
+                <div class="w-6 h-0.5 bg-blue-800 my-1 transition-all"></div>
+                <div class="w-6 h-0.5 bg-blue-800 my-1 transition-all"></div>
+            </div>
+
+            <!-- Navbar Options -->
+            <div role="menubar" id="navbar"
+                class="absolute left-0 right-0 flex flex-col items-center gap-6 p-6 font-bold text-center underline transition-all duration-300 ease-in-out bg-white border-t-8 top-36 lg:bg-transparent lg:flex-row lg:justify-end lg:static border-t-gray-500 lg:border-t-0">
+                <a role="menuitem" href="/"
+                    class="text-[17px] hover:bg-blue-800 hover:text-white p-3 transition-all duration-300 ease-in-out hover:italic rounded-xl">Home</a>
+                <a role="menuitem" href="/contact-us"
+                    class="text-[17px] hover:bg-blue-800 p-3 transition-all hover:text-white duration-300 ease-in-out hover:italic rounded-xl">Contact
+                    Us</a>
+                <a role="menuitem" href="/services"
+                    class="text-[17px] hover:bg-blue-800 p-3 transition-all hover:text-white duration-300 ease-in-out hover:italic rounded-xl">Services</a>
+            </div>
+
+            <button><a href='/'
+                    class="hidden p-4 px-6 font-semibold text-white underline transition-all duration-200 bg-blue-800 rounded cursor-pointer hover:shadow-lg hover:opacity-95 lg:block hover:shadow-blue-800">Get
+                    Started</a>
+            </button>
+        </div>
+    </nav>
