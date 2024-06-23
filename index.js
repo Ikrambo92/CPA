@@ -32,15 +32,16 @@ app.get('/thanks', (req, res) => {
 })
 
 
-// Setting up the transporter with Livemail SMTP settings
 const transporter = nodemailer.createTransport({
-    host: 'smtp.livemail.co.uk', // Livemail SMTP server
-    port: 587,                   // Livemail SMTP port
-    secure: false,               // Use TLS (false for port 587)
+    host: 'smtp.livemail.co.uk', 
+    port: 587,
+    secure: false,
     auth: {
-        user: 'Ikram@cpa-ltd.co.uk', // Replace with your Livemail email
-        pass: 'BusinessRates123'     // Replace with your Livemail email password
-    }
+        user: 'Ikram@cpa-ltd.co.uk',
+        pass: 'BusinessRates123'
+    },
+    debug: true,
+    logger: true
 });
 
 const upload = multer({ dest: 'uploads/' });
@@ -63,14 +64,12 @@ app.post('/success', upload.single('attachment'), (req, res) => {
         ]
     };
 
-    // Sending the email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error(error);
             return res.status(500).send('Error sending email.');
         }
 
-        // Clean up uploaded file after successful email sending (optional)
         const filePath = req.file.path;
         fs.unlink(filePath, (err) => {
             if (err) {
@@ -79,6 +78,7 @@ app.post('/success', upload.single('attachment'), (req, res) => {
         });
 
         res.render('submission.ejs');
+        console.log('"Email w/ attachment has been sent to Cheshire Property Advisors"')
     });
 });
 
@@ -95,10 +95,9 @@ app.post('/submission', async (req, res) => {
             return res.status(500).send(error.toString());
         }
         res.render('submission.ejs');
+        console.log('"Email and message has been sent to Cheshire Property Advisors"')
     });
 });
-
-
 
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));

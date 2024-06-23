@@ -48,3 +48,18 @@ function validateForm() {
 
     return true;
 }
+
+
+document.getElementById('scrollToBottom').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+
+    // Calculate the position to scroll to (e.g., 20% higher than the bottom)
+    var scrollOffset = 1.3; // Adjust this value as needed (e.g., 0.2 for 20% higher)
+    var scrollToPosition = document.body.scrollHeight - (scrollOffset * window.innerHeight);
+
+    // Scroll to the calculated position
+    window.scrollTo({
+        top: scrollToPosition,
+        behavior: 'smooth' // Optional: smooth scrolling animation
+    });
+});
